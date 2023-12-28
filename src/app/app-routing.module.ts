@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GruposComponent } from './grupos/grupos.component';
-import { ContatosComponent } from './contatos/contatos.component';
+import { GruposComponent } from './pages/grupos/grupos.component';
+import { ContatosComponent } from './pages/contatos/contatos.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 const routes: Routes = [
-  {path: '', component: ContatosComponent},
-  {path: 'cadastro-grupos', component: GruposComponent},
+  {path: '', component: HomeComponent},
+  {path: 'sobre', component: SobreComponent},
+  {path: 'cadastro-contatos', component: ContatosComponent},
+  {path: 'cadastro-contatos/:id', component: ContatosComponent},
 ];
 
 @NgModule({
